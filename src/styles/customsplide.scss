@@ -1,0 +1,31 @@
+.custom__pagination {
+    @apply justify-start relative gap-1 flex #{!important};
+
+    li {
+        @apply flex h-auto #{!important};
+    }
+
+    .splide__pagination__page.is-active {
+        @apply opacity-100 w-2 h-2 scale-100 rounded-full bg-primary #{!important};
+    }
+
+    .splide__pagination__page {
+        @apply bg-primary/40 transition-all duration-200 ease-in-out w-2 h-2 rounded-full #{!important};
+    }
+}
+
+.splide__arrow--prev {
+    left: -1rem !important;
+}
+
+.splide__arrow--next {
+    right: -1rem !important;
+}
+
+.splide__big__arrows {
+    @apply opacity-100 duration-200 ease-in-out transition-all shadow-md bg-white h-16 w-16 #{!important};
+
+    &:disabled {
+        @apply opacity-0 pointer-events-none #{!important};
+    }
+}

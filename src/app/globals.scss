@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: 27 27 27;
+  --secondary-color: 53 53 53;
+  --background-color: 255 255 255;
+  --foreground-color: 23 23 23;
+  --accent-color: 34 211 238;
+  --max-page-width: 1320px;
+  --border-radius-button: 4px;
+  --border-radius-general: 0.5rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.max-page-width {
+  max-width: var(--max-page-width);
+  @apply mx-auto container;
+}
+
+.max-hero-width {
+  max-width: calc(var(--max-page-width) + 100px);
+  @apply mx-auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+section:not(:first-of-type) {
+  animation: fadeIn 1s;
+  animation-fill-mode: both;
+}
+
+@for $i from 1 through 50 {
+  section:nth-of-type(#{$i}) {
+    animation-delay: $i * 0.25s;
+  }
+}
+
+::-webkit-slider-thumb {
+  border: 1px solid rgba(0, 0, 0, .45);
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+::-moz-range-thumb {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.thumb-slider {
+  &::-webkit-slider-thumb {
+    @apply h-6 w-6 appearance-none rounded-full bg-background border shadow-md transition-all hover:scale-110;
+  }
+
+  &::-moz-range-thumb {
+    @apply h-6 w-6 rounded-full bg-background border;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* Internet Explorer and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+}
