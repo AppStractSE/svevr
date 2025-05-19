@@ -18,7 +18,7 @@ const HowItWorks = () => {
   const stepRefs = useRef<(HTMLElement | null)[]>([]);
   const steps = [
     {
-      title: "Inspektion & Planering",
+      title: "Inspektion & planering",
       shortDescription:
         "Vi börjar med att inspektera ytan – oavsett om det gäller tak, solpaneler eller fönster. Därefter planerar vi metod och utrustning för ett skonsamt och effektivt resultat.",
       description:
@@ -26,7 +26,7 @@ const HowItWorks = () => {
       image: "/svevr_step1.png",
     },
     {
-      title: "Förberedelse & Säkerhetsåtgärder",
+      title: "Förberedelse & säkerhetsåtgärder",
       shortDescription:
         "Vi säkrar området och ser till att alla moment sker tryggt och kontrollerat. Drönaren förbereds med rätt utrustning och rengöringsmedel.",
       description:
@@ -42,7 +42,7 @@ const HowItWorks = () => {
       image: "/svevr_step3.png",
     },
     {
-      title: "Efterkontroll & Resultat",
+      title: "Efterkontroll & resultat",
       shortDescription:
         "Vi kontrollerar det färdiga resultatet och dokumenterar med bilder från drönaren. Du får en tydlig sammanställning direkt efteråt.",
       description:
@@ -66,10 +66,10 @@ const HowItWorks = () => {
     <section className="border-y">
       <div
         className={twMerge(
-          "max-page-width grid grid-cols-1 items-start gap-12 px-4 py-12 md:gap-8 md:py-24 lg:relative lg:grid-cols-2",
+          "max-page-width grid grid-cols-1 items-start gap-8 px-4 py-12 md:py-24 lg:relative lg:grid-cols-2 lg:gap-4",
         )}
       >
-        <div className="gap-4 md:gap-8 lg:sticky lg:top-32 lg:flex lg:flex-col">
+        <div className="gap-8 lg:sticky lg:top-32 lg:flex lg:flex-col lg:gap-12">
           <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
             Så funkar det
           </h2>
@@ -108,7 +108,7 @@ const HowItWorks = () => {
                   stepRefs.current[index] = el;
                 }}
                 className={twMerge(
-                  "flex scroll-mt-32 flex-col gap-4 transition-opacity duration-200 ease-in-out",
+                  "flex scroll-mt-32 flex-col gap-4 transition-opacity duration-200 ease-in-out lg:gap-8",
                   currentStep === index ? "opacity-100" : "opacity-50",
                 )}
               >

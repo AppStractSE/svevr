@@ -31,9 +31,9 @@ const FranchiseSection = ({
       <div className="max-page-width grid items-center justify-between gap-6 px-4 py-12 sm:grid-cols-2 md:gap-8 md:py-24 lg:gap-12">
         <div className={twMerge("flex flex-col gap-6 md:gap-8")}>
           <p className="whitespace-pre-line text-base md:text-lg">{subtitle}</p>
-          <h3 className="text-3xl font-medium tracking-wide md:text-4xl">
+          <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
             {title}
-          </h3>
+          </h2>
           <p className="whitespace-pre-line text-base md:text-lg">{text}</p>
           {button && (
             <Button

@@ -23,12 +23,12 @@ const ContactSection = () => {
             {`Boka ett möte med oss, så visar vi hur Svevr funkar! Vi tar dig genom en demo av vår drönartvätt för tak, fasader och fönster – skräddarsydd för dig, utan några krav. Vi vill snacka med dig – inte bara om vad vi gör, utan om vad du vill uppnå.\n\nKanske vill du göra underhållet smidigare, få fasaden att glänsa eller bara slippa krångel? Vi lyssnar och hjälper till. Vårt gäng är taggade på att lära känna din verksamhet och se hur Svevr kan backa upp dina planer.`}
           </p>
           <div className="flex flex-col gap-2">
-            <p className="mb-2 mt-4 text-balance text-xl">
+            <p className="mb-2 mt-4 text-balance text-base md:text-lg">
               Det här kan du förvänta dig av oss
             </p>
             {points.map((point, index) => (
               <div key={index} className="flex items-start gap-2">
-                <Check size={16} className="mt-1" />
+                <Check size={16} className="mt-1 min-w-fit" />
                 <p className="text-sm md:text-base">{point}</p>
               </div>
             ))}

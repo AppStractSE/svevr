@@ -1,5 +1,7 @@
+import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import Button from "../buttons/Button";
 
 const OurTeam = () => {
   const team = [
@@ -31,6 +33,12 @@ const OurTeam = () => {
     },
   ];
 
+  const points = [
+    "Certifierade drönarpiloter med hundratals flygtimmar",
+    "Specialistkompetens inom tak, fasad och solpaneler",
+    "Ett lösningsorienterat team med fokus på service och säkerhet",
+  ];
+
   return (
     <section className="border-y">
       <div
@@ -42,13 +50,23 @@ const OurTeam = () => {
           <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
             Möt teamet bakom Svevr
           </h2>
-          <p className="text-balance text-lg lg:max-w-3xl">
-            Bakom varje uppdrag står ett team med genuin passion för innovation,
-            hållbarhet och kvalitet. Svevr Sverige består av certifierade
-            drönarpiloter, tekniker och specialister med olika bakgrunder men
-            ett gemensamt mål: att förändra hur vi tar hand om våra byggnader –
-            med precision, säkerhet och respekt för både människor och miljö.
+          <p className="whitespace-pre-line text-balance text-base md:text-lg lg:max-w-3xl">
+            {`Vi är ett team av dedikerade och erfarna drönarpiloter som brinner för att leverera högkvalitativa tjänster inom byggnadstvätt och takbehandling. Vårt mål är att hjälpa våra kunder att hålla sina fastigheter i toppskick med hjälp av den senaste teknologin och metoderna.\n\nVårt team är alltid redo att hjälpa dig med dina behov och vi ser fram emot att få arbeta med dig.`}
           </p>
+          <div>
+            {points.map((point, index) => (
+              <div key={index} className="flex items-start gap-2">
+                <Check size={18} className="mt-1.5 min-w-fit" />
+                <p className="text-base md:text-lg">{point}</p>
+              </div>
+            ))}
+          </div>
+          <Button
+            href="/franchise"
+            text="Kom i kontakt med oss"
+            icon={<ArrowRight size={16} />}
+            className="mt-4 bg-primary text-base hover:bg-[#232323]"
+          />
         </div>
         <div className="grid w-full grid-cols-2 flex-col gap-x-2 gap-y-12 lg:flex">
           {team.map((teamMember, index) => (

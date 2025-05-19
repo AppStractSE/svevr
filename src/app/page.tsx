@@ -1,8 +1,8 @@
 import ContactSection from "@/components/sections/ContactSection";
 import FranchiseSection from "@/components/sections/FranchiseSection";
 import HeroSection from "@/components/sections/HeroSection";
-import OurTeam from "@/components/sections/OurTeam";
 import HowItWorks from "@/components/sections/HowItWorks";
+import OurTeam from "@/components/sections/OurTeam";
 import Services from "@/components/sections/Services";
 
 export default function Home() {
@@ -13,7 +13,6 @@ export default function Home() {
       />
       <HowItWorks />
       <Services />
-      {/* <WhySvevr /> */}
       <OurTeam />
       <FranchiseSection
         rtl
