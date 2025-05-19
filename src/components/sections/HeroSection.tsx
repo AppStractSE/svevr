@@ -13,7 +13,7 @@ const HeroSection = ({ className }: Props) => {
   const isMounted = useMounted();
   return (
     <section className={className}>
-      <div className="relative flex min-h-[75vh] flex-col justify-center md:min-h-[80vh] lg:min-h-screen">
+      <div className="relative flex min-h-screen flex-col justify-center">
         <video
           playsInline
           autoPlay
@@ -27,7 +27,7 @@ const HeroSection = ({ className }: Props) => {
         <div className="max-page-width relative z-10 w-full px-4 py-12 pt-32 lg:gap-8 lg:py-24 xl:py-32">
           <div
             className={twMerge(
-              "flex flex-col gap-4 transition-all duration-500 ease-in-out md:w-2/3 md:gap-6",
+              "flex flex-col gap-4 transition-all duration-500 ease-in-out md:w-2/3 md:gap-8",
               isMounted
                 ? "translate-y-0 opacity-100"
                 : "translate-y-8 opacity-0",
@@ -37,11 +37,11 @@ const HeroSection = ({ className }: Props) => {
               Säkra och smidiga takbehandlingar utan lift, byggställningar eller
               krångel
             </h1>
-            <h2 className="whitespace-pre-line text-lg font-medium text-background sm:text-balance md:text-xl">
+            <h6 className="whitespace-pre-line text-base font-medium text-background sm:text-balance sm:text-lg md:text-xl">
               Svevr använder avancerad drönarteknik för att rengöra och behandla
               tak och fasad snabbare, tryggare och mer kostnadseffektivt än
               traditionella metoder. Smart, säkert och miljövänligt!
-            </h2>
+            </h6>
             <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-12">
               <Button
                 href="/tjanster"
