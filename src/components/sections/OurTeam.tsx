@@ -50,7 +50,7 @@ const OurTeam = () => {
           <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
             Möt teamet bakom Svevr
           </h2>
-          <p className="whitespace-pre-line text-balance text-base md:text-lg lg:max-w-3xl">
+          <p className="whitespace-pre-line lg:text-balance text-base md:text-lg lg:max-w-3xl">
             {`Vi är ett team av dedikerade och erfarna drönarpiloter som brinner för att leverera högkvalitativa tjänster inom byggnadstvätt och takbehandling. Vårt mål är att hjälpa våra kunder att hålla sina fastigheter i toppskick med hjälp av den senaste teknologin och metoderna.\n\nVårt team är alltid redo att hjälpa dig med dina behov och vi ser fram emot att få arbeta med dig.`}
           </p>
           <div>
