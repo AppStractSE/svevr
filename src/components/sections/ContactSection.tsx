@@ -1,5 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import { Check } from "lucide-react";
+import { Suspense } from "react";
 
 const ContactSection = () => {
   const points = [
@@ -34,7 +35,9 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="basis-12/12 lg:basis-5/12">
-          <ContactForm />
+          <Suspense>
+            <ContactForm />
+          </Suspense>
         </div>
       </div>
     </section>
