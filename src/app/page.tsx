@@ -14,16 +14,7 @@ export default function Home() {
       <HowItWorks />
       <Services />
       <OurTeam />
-      <FranchiseSection
-        rtl
-        button={{
-          href: "/kontakt",
-          text: "Läs mer om franchise",
-        }}
-        title="Bli en del av SVEVR"
-        text={`Har du ett intresse av drönarflygning och byggnadstvätt? Vi har ett flertal regionala aktörer som vi just nu hjälper till att starta upp inför säsongen.\n\nAnsök du också så kommer du vara igång inom kort.`}
-        image="/svevrige.png"
-      />
+      <FranchiseSection />
       <ContactSection />
     </>
   );
