@@ -11,7 +11,7 @@ export default function Page() {
         }}
         title="Upptäck Svevr"
         text="Vi är experter på byggnadstvätt och erbjuder en rad olika tjänster för att hålla ditt hem eller företag i toppskick."
-        image="/svevr_step1.png"
+        video="/svevr.mp4"
         className="overflow-hidden bg-[url('/hero-image.png')] bg-cover bg-center bg-no-repeat"
       />
       <Services />

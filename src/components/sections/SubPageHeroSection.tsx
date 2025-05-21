@@ -2,13 +2,12 @@
 
 import Button from "@/components/buttons/Button";
 import useMounted from "@/hooks/useMounted";
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
   title: string;
   text?: string;
-  image?: string;
+  video?: string;
   className?: string;
   button?: {
     text: string;
@@ -19,7 +18,7 @@ interface Props {
 const SubPageHeroSection = ({
   title,
   text,
-  image,
+  video,
   className,
   button,
 }: Props) => {
@@ -31,14 +30,15 @@ const SubPageHeroSection = ({
         "relative flex min-h-screen items-center justify-center py-12 md:py-24",
       )}
     >
-      <Image
-        priority
-        quality={100}
-        fill
-        alt={title}
-        src={image ?? "/hero-image.webp"}
-        className="object-cover object-center"
-      />
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        id="myVideo"
+        src={video}
+        className="absolute inset-0 h-full w-full object-cover"
+      ></video>
       <div className="absolute inset-0 bg-primary/50"></div>
       <div
         className={twMerge(
