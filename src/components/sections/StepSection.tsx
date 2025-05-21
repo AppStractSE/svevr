@@ -1,10 +1,25 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { IntersectionOptions, useInView } from "react-intersection-observer";
 import { twMerge } from "tailwind-merge";
 
-// Custom hook for dynamic useInView hooks
+type Step = {
+  title: string;
+  shortDescription: string;
+  description: string;
+  image: string;
+};
+
+type StepSectionProps = {
+  title: string;
+  steps: Step[];
+  showStepIndex?: boolean;
+  options?: IntersectionOptions;
+};
+
+// Custom hook
 const useStepInViewStates = (
   count: number,
   options: IntersectionOptions | undefined,
@@ -13,48 +28,19 @@ const useStepInViewStates = (
   return Array.from({ length: count }, () => useInView(options));
 };
 
-const HowItWorks = () => {
+const StepSection = ({
+  title,
+  steps,
+  options,
+  showStepIndex,
+}: StepSectionProps) => {
   const [currentStep, setCurrentStep] = useState(0);
   const stepRefs = useRef<(HTMLElement | null)[]>([]);
-  const steps = [
-    {
-      title: "Inspektion & planering",
-      shortDescription:
-        "Vi börjar med att inspektera ytan – oavsett om det gäller tak, solpaneler eller fönster. Därefter planerar vi metod och utrustning för ett skonsamt och effektivt resultat.",
-      description:
-        "Första steget är alltid att analysera förutsättningarna. Vi inspekterar byggnadens placering, ytan som ska rengöras och bedömer nedsmutsningsgrad, höjd och material. Denna översikt görs med hjälp av drönare och ligger till grund för val av rengöringsmetod, tryck och medel. Vår teknik anpassas alltid efter ytan – tak, fönster eller solpaneler – för att uppnå ett skinande rent resultat utan risk för skador.",
-      image: "/svevr_step1.png",
-    },
-    {
-      title: "Förberedelse & säkerhetsåtgärder",
-      shortDescription:
-        "Vi säkrar området och ser till att alla moment sker tryggt och kontrollerat. Drönaren förbereds med rätt utrustning och rengöringsmedel.",
-      description:
-        "Innan vi påbörjar arbetet förbereder vi platsen noggrant. Vi kontrollerar väderförhållanden, spärrar av området om det behövs, och informerar berörda. Drönaren testas och laddas med rätt mängd skonsamt rengöringsmedel anpassat för just er yta. Allt detta görs för att tvätten ska ske säkert, effektivt och utan störningar.",
-      image: "/svevr_step2.jpeg",
-    },
-    {
-      title: "Drönartvätt av valda ytor",
-      shortDescription:
-        "Med precision och teknik rengör vi tak, fönster eller solpaneler – utan lift eller stege. Perfekt för svåråtkomliga platser.",
-      description:
-        "Nu påbörjas själva tvätten. Vår drönare styrs med hög precision och sprider rengöringsmedel jämnt över ytan. Vi når fönster på hög höjd, stora solpanelsfält eller tak med svår åtkomst – snabbt och utan fysisk kontakt. Det minimerar slitage och eliminerar behovet av klättring eller tunga maskiner. Resultatet blir skinande rent – oavsett yta.",
-      image: "/svevr_step3.png",
-    },
-    {
-      title: "Efterkontroll & resultat",
-      shortDescription:
-        "Vi kontrollerar det färdiga resultatet och dokumenterar med bilder från drönaren. Du får en tydlig sammanställning direkt efteråt.",
-      description:
-        "När rengöringen är klar gör vi en visuell efterkontroll – ofta med hjälp av drönaren igen. Vi dokumenterar arbetet och ser till att resultatet motsvarar våra höga krav. Kunden får tillgång till bilder eller video på före/efter. Det ger både trygghet och transparens.",
-      image: "/svevr_step4.jpeg",
-    },
-  ];
+  const inViewStates = useStepInViewStates(
+    steps.length,
+    options || { threshold: 0.66 },
+  );
 
-  // Create inView hooks dynamically
-  const inViewStates = useStepInViewStates(steps.length, { threshold: 0.66 });
-
-  // Sync visible step to currentStep
   useEffect(() => {
     const indexInView = inViewStates.findIndex(([, inView]) => inView);
     if (indexInView !== -1 && indexInView !== currentStep) {
@@ -71,7 +57,7 @@ const HowItWorks = () => {
       >
         <div className="gap-8 lg:sticky lg:top-32 lg:flex lg:flex-col lg:gap-12">
           <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
-            Så funkar det
+            {title}
           </h2>
           <div className="hidden lg:block">
             {steps.map((step, index) => (
@@ -90,7 +76,8 @@ const HowItWorks = () => {
                 }}
               >
                 <p className="text-lg">
-                  {index + 1}. {step.title}
+                  {showStepIndex ? `${index + 1}. ` : null}
+                  {step.title}
                 </p>
                 <p className="text-sm">{step.shortDescription}</p>
               </div>
@@ -123,7 +110,8 @@ const HowItWorks = () => {
                 </div>
                 <div className="mb-auto flex w-full flex-col justify-start gap-2 px-2">
                   <h3 className="text-balance text-lg md:text-2xl">
-                    {index + 1}. {step.title}
+                    {showStepIndex ? `${index + 1}. ` : null}
+                    {step.title}
                   </h3>
                   <p className="text-base antialiased">{step.description}</p>
                 </div>
@@ -136,4 +124,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default StepSection;
