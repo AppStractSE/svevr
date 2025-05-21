@@ -33,7 +33,7 @@ const HeroSection = ({ className }: Props) => {
                 : "translate-y-8 opacity-0",
             )}
           >
-            <h1 className="whitespace-pre-line text-balance text-3xl font-medium !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="text-balance text-3xl font-medium !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
               Säkra och smidiga takbehandlingar utan lift, byggställningar eller
               krångel
             </h1>

@@ -41,8 +41,8 @@ const Services = () => {
               </div>
               <div className="mt-4 px-2">
                 <Button
-                  href="/kom-igang"
-                  text="Läs mer"
+                  href={`tjanster/${service.id}`}
+                  text={`Till ${service.title.toLowerCase()}`}
                   icon={<ArrowRight size={16} />}
                   className="bg-primary text-sm hover:bg-[#232323]"
                 />

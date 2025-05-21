@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import HowItWorks from "@/components/sections/HowItWorks";
 import OurTeam from "@/components/sections/OurTeam";
 import Services from "@/components/sections/Services";
+import WhySvevr from "@/components/sections/WhySvevr";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       />
       <HowItWorks />
       <Services />
-      <OurTeam />
+      <WhySvevr />
       <FranchiseSection />
+      <OurTeam />
       <ContactSection />
     </>
   );
