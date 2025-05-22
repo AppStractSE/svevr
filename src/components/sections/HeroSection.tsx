@@ -33,11 +33,11 @@ const HeroSection = ({ className }: Props) => {
                 : "translate-y-8 opacity-0",
             )}
           >
-            <h1 className="text-balance text-3xl font-medium !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="text-balance text-3xl !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
               Säkra och smidiga takbehandlingar utan lift, byggställningar eller
               krångel
             </h1>
-            <h6 className="whitespace-pre-line text-base font-medium text-background sm:text-balance sm:text-lg md:text-xl">
+            <h6 className="whitespace-pre-line text-base text-background sm:text-balance sm:text-lg md:text-xl">
               Svevr använder avancerad drönarteknik för att rengöra och behandla
               tak och fasad snabbare, tryggare och mer kostnadseffektivt än
               traditionella metoder. Smart, säkert och miljövänligt!

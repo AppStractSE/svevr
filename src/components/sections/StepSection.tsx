@@ -56,7 +56,7 @@ const StepSection = ({
         )}
       >
         <div className="gap-8 lg:sticky lg:top-32 lg:flex lg:flex-col lg:gap-12">
-          <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
+          <h2 className="max-w-3xl text-balance text-2xl sm:text-3xl md:text-4xl">
             {title}
           </h2>
           <div className="hidden lg:block">

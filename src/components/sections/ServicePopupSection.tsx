@@ -108,7 +108,7 @@ const ServicePopupSection = ({ className }: Props) => {
                     className="group flex min-h-[300px] flex-col gap-4 rounded-lg bg-white px-6 py-8 text-primary shadow outline outline-1 outline-gray-300 transition-all duration-200 ease-in-out hover:-translate-y-1 hover:outline-cyan-500"
                   >
                     <h3 className="text-xl">{service.title}</h3>
-                    <p className="text-base font-medium">{service.text}</p>
+                    <p className="text-base">{service.text}</p>
                     <div className="mt-auto flex items-center gap-2 transition-all duration-100 ease-out md:group-hover:gap-4">
                       <ArrowRight size={20} />
                       <p className="text-base">Läs mer</p>

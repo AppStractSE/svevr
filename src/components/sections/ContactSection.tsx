@@ -16,10 +16,10 @@ const ContactSection = () => {
     <section className="bg-[#f9f9f9]">
       <div className="max-page-width flex flex-col justify-between gap-12 px-4 py-12 md:flex-row md:gap-24 md:py-24">
         <div className="flex basis-6/12 flex-col gap-4 md:gap-8">
-          <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
+          <h2 className="max-w-3xl text-balance text-2xl sm:text-3xl md:text-4xl">
             Snacka med oss redan idag!
           </h2>
-          <p className="whitespace-pre-line text-base md:text-lg md:max-w-2xl">
+          <p className="whitespace-pre-line text-base md:max-w-2xl md:text-lg">
             {`Boka ett möte med oss, så visar vi hur Svevr funkar! Vi tar dig genom en demo av vår drönartvätt för tak, fasader och fönster – skräddarsydd för dig, utan några krav. Vi vill snacka med dig – inte bara om vad vi gör, utan om vad du vill uppnå.\n\nKanske vill du göra underhållet smidigare, få fasaden att glänsa eller bara slippa krångel? Vi lyssnar och hjälper till. Vårt gäng är taggade på att lära känna din verksamhet och se hur Svevr kan backa upp dina planer.`}
           </p>
           <div className="flex flex-col gap-2">

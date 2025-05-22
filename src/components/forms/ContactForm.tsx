@@ -122,12 +122,12 @@ const ContactForm = () => {
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
   const errorTextBaseClass =
-    "text-red-500 text-xs font-medium transition-all duration-500 ease-in-out";
+    "text-red-500 text-xs  transition-all duration-500 ease-in-out";
   const errorTextHiddenClasses = "opacity-0 max-h-0 ";
   const errorTextVisibleClasses = "my-2 opacity-100 max-h-full";
 
   return (
-    <div className="relative flex flex-col gap-4 md:gap-8 rounded-sm bg-background p-4 lg:p-8">
+    <div className="relative flex flex-col gap-4 rounded-sm bg-background p-4 md:gap-8 lg:p-8">
       <div className="flex justify-center">
         <div
           className={twMerge(
@@ -372,8 +372,8 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="text-sm opacity-50">
-          Vi svarar vanligtvis samma dag på vardagar (Måndag - Fredag,
-          09:00 - 17:00).
+          Vi svarar vanligtvis samma dag på vardagar (Måndag - Fredag, 09:00 -
+          17:00).
         </div>
       </div>
 

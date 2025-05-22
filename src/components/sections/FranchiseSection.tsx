@@ -17,7 +17,7 @@ const FranchiseSection = () => {
           />
         </div>
         <div className="flex flex-col gap-6 md:gap-8">
-          <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
+          <h2 className="max-w-3xl text-balance text-2xl sm:text-3xl md:text-4xl">
             Bli en del av Svevr
           </h2>
           <p className="whitespace-pre-line text-base md:text-lg">{`Har du ett intresse av drönarflygning och byggnadstvätt? Vi har ett flertal regionala aktörer som vi just nu hjälper till att starta upp inför säsongen.\n\nAnsök du också så kommer du vara igång inom kort.`}</p>

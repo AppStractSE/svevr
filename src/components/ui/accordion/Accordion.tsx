@@ -17,7 +17,7 @@ const Accordion = ({ title, children, setIsOpen, isOpen }: AccordionProps) => {
         className="flex w-full items-center justify-between focus:outline-none"
         onClick={setIsOpen}
       >
-        <span className="text-base font-medium">{title}</span>
+        <span className="text-base">{title}</span>
         <ChevronDown
           className={twMerge(
             "h-5 w-5 transform transition-transform duration-200",

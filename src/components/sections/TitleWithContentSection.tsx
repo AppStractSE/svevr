@@ -20,7 +20,7 @@ const TitleWithContentSection = ({
             "max-page-width flex flex-col gap-4 px-4 md:gap-8",
           )}
         >
-          <h2 className="text-3xl font-medium tracking-wider sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl tracking-wider sm:text-4xl md:text-5xl">
             {title}
           </h2>
           <p className="whitespace-pre-line leading-relaxed tracking-wider md:w-1/2">

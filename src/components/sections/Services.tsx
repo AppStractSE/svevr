@@ -14,7 +14,7 @@ const Services = () => {
         )}
       >
         <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <h2 className="max-w-3xl text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
+          <h2 className="max-w-3xl text-balance text-2xl sm:text-3xl md:text-4xl">
             Våra tjänster
           </h2>
           <h6 className="max-w-3xl text-balance text-lg md:text-xl">

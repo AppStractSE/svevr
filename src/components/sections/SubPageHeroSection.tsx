@@ -46,12 +46,10 @@ const SubPageHeroSection = ({
           isMounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
         )}
       >
-        <h2 className="max-w-3xl text-balance text-3xl font-medium !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
+        <h2 className="max-w-3xl text-balance text-3xl !leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
           {title}
         </h2>
-        <h6 className="max-w-xl text-balance text-lg font-medium md:text-xl">
-          {text}
-        </h6>
+        <h6 className="max-w-xl text-balance text-lg md:text-xl">{text}</h6>
         {button && (
           <Button
             href={button.href}

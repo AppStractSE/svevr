@@ -78,7 +78,7 @@ const WhySvevr = () => {
         <div className="relative grid grid-cols-1 items-start gap-8 md:gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="flex flex-col gap-8 md:gap-12 lg:sticky lg:top-32">
             <div className="flex flex-col gap-4">
-              <h2 className="text-balance text-2xl font-medium sm:text-3xl md:text-4xl">
+              <h2 className="text-balance text-2xl sm:text-3xl md:text-4xl">
                 Varför Svevr?
               </h2>
               <p className="max-w-2xl text-balance text-lg md:text-xl">
@@ -120,9 +120,7 @@ const WhySvevr = () => {
               className="h-full w-full rounded-sm object-cover object-center"
             />
             <div className="flex flex-col gap-4 px-2">
-              <div className="text-xl font-medium md:text-2xl">
-                {tabs[selected].title}
-              </div>
+              <div className="text-xl md:text-2xl">{tabs[selected].title}</div>
               <p className="text-base md:text-lg">
                 {tabs[selected].description}
               </p>

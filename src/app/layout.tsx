@@ -57,7 +57,7 @@ export default async function RootLayout({
   return (
     <html lang="sv">
       <body
-        className={`${PlusJakartaSans.className} bg-background text-primary antialiased`}
+        className={`${PlusJakartaSans.className} bg-background text-primary font-medium antialiased`}
       >
         <InitializeTheme />
         <Toaster />
