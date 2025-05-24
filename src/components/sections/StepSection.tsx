@@ -96,7 +96,7 @@ const StepSection = ({
                 }}
                 className={twMerge(
                   "flex scroll-mt-32 flex-col gap-4 transition-opacity duration-200 ease-in-out lg:gap-8",
-                  currentStep === index ? "opacity-100" : "opacity-50",
+                  currentStep === index ? "lg:opacity-100" : "lg:opacity-50",
                 )}
               >
                 <div className="relative aspect-[1.618/1] w-full">
